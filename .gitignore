@@ -1,0 +1,11 @@
+/node_modules
+# Ignore everything...
+/*
+
+# Except the following files
+!/geocode
+!app.js
+!package-lock.json
+!package.json
+!README.md
+!.gitignore
