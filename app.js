@@ -13,8 +13,7 @@ const argv = yargs
     }
   })
   .help()
-  .alias('help', 'h')
-  .argv;
+  .alias('help', 'h').argv;
 
 // Get location coordinates for a given address
 geocode.geocodeAddress(argv.a, (error, results) => {
@@ -24,12 +23,20 @@ geocode.geocodeAddress(argv.a, (error, results) => {
     console.log(results.address);
 
     // Get weather information for a given set of coordinates
-    weather.getWeather(results.latitude, results.longitude, (error, weatherResults) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(`It's currently ${weatherResults.temperature}. It fees like ${weatherResults.apparentTemperature}.`);
+    weather.getWeather(
+      results.latitude,
+      results.longitude,
+      (error, weatherResults) => {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(
+            `It's currently ${weatherResults.temperature}. It fees like ${
+              weatherResults.apparentTemperature
+            }.`
+          );
+        }
       }
-    });
+    );
   }
 });
