@@ -4,6 +4,7 @@
 
 # Except the following files
 !/geocode
+!/weather
 !app.js
 !package-lock.json
 !package.json
