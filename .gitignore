@@ -6,6 +6,7 @@
 !/geocode
 !/weather
 !app.js
+!app-promise.js
 !package-lock.json
 !package.json
 !README.md
